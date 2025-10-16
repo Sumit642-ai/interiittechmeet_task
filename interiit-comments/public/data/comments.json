@@ -1,0 +1,6 @@
+[
+  { "id": 1, "text": "First!", "upvotes": 2, "created_at": "2025-10-10T10:00:00.000Z", "user_id": 1 },
+  { "id": 2, "text": "Nice post.", "upvotes": 1, "created_at": "2025-10-10T11:00:00.000Z", "user_id": 2 },
+  { "id": 3, "text": "I have a question.", "upvotes": 0, "created_at": "2025-10-10T12:30:00.000Z", "user_id": 3 },
+  { "id": 4, "text": "Reply to #3", "parent_id": 3, "upvotes": 0, "created_at": "2025-10-10T13:00:00.000Z", "user_id": 1 }
+]
