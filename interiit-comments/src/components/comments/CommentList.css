@@ -1,0 +1,27 @@
+/* CommentList Styles */
+.comment-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.empty-comments {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.empty-comments-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.empty-comments-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #d1d5db;
+  margin-bottom: 0.5rem;
+}
+
+.empty-comments-text {
+  color: #9ca3af;
+}

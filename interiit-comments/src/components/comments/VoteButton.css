@@ -1,0 +1,20 @@
+/* VoteButton Styles */
+.vote-button {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+  color: #9ca3af;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.vote-button:hover {
+  color: white;
+}
+
+.vote-icon {
+  font-size: 0.875rem;
+}

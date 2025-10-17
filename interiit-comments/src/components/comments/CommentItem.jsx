@@ -3,6 +3,19 @@ import CollapseToggle from "./CollapseToggle";
 import ReplyForm from "./ReplyForm";
 import { useComments } from "../../context/CommentsContext";
 import { useAuth } from "../../context/AuthContext";
+import "./CommentItem.css";
+
+// Helper function to get time ago
+const getTimeAgo = (dateString) => {
+  const now = new Date();
+  const date = new Date(dateString);
+  const diffInSeconds = Math.floor((now - date) / 1000);
+  
+  if (diffInSeconds < 60) return `${diffInSeconds}s ago`;
+  if (diffInSeconds < 3600) return `${Math.floor(diffInSeconds / 60)}m ago`;
+  if (diffInSeconds < 86400) return `${Math.floor(diffInSeconds / 3600)}h ago`;
+  return `${Math.floor(diffInSeconds / 86400)}d ago`;
+};
 
 export default function CommentItem({ node, level = 0, collapsedMap }) {
   const { upvote, toggle, reply, users } = useComments();
@@ -10,36 +23,83 @@ export default function CommentItem({ node, level = 0, collapsedMap }) {
   const u = users.find(x => x.id === node.user_id);
 
   const collapsed = !!collapsedMap[node.id];
+  const isReply = level > 0;
 
   return (
-    <div className="py-3">
-      <div className="flex gap-3">
-        <img src={u?.avatar} alt="" className="h-9 w-9 rounded-full object-cover ring-1 ring-gray-200" />
-        <div className="flex-1">
-          <div className="flex items-center gap-2">
-            <span className="font-medium text-sm">{u?.name ?? "User"}</span>
-            <span className="text-xs text-gray-500">{new Date(node.created_at).toLocaleString()}</span>
+    <div className={`comment-item ${isReply ? 'reply' : ''}`}>
+      {/* Nesting line for replies */}
+      {isReply && (
+        <div className="nesting-line">
+          <div className="nesting-line-vertical"></div>
+          <div className="nesting-line-horizontal"></div>
+        </div>
+      )}
+      
+      <div className="comment-card">
+        <div className="comment-content">
+          {/* Avatar */}
+          <div className="comment-avatar">
+            {u?.avatar ? (
+              <img 
+                src={u.avatar} 
+                alt={u.name || 'User'} 
+                className="avatar-image"
+                onError={(e) => {
+                  // Fallback to initials if image fails to load
+                  e.target.style.display = 'none';
+                  e.target.nextSibling.style.display = 'flex';
+                }}
+              />
+            ) : null}
+            <div className="avatar-circle" style={{ display: u?.avatar ? 'none' : 'flex' }}>
+              {u?.name ? u.name.charAt(0).toUpperCase() : 'U'}
+            </div>
           </div>
-          <p className="mt-1 text-sm leading-6 text-gray-800 bg-white rounded-lg border px-3 py-2 shadow-xs">
-            {node.text}
-          </p>
+          
+          {/* Comment Content */}
+          <div className="comment-main">
+            {/* User info and timestamp */}
+            <div className="comment-header">
+              <span className="comment-username">{u?.name ?? "Anonymous User"}</span>
+              <span className="comment-timestamp">
+                {getTimeAgo(node.created_at)}
+              </span>
+            </div>
+            
+            {/* Comment text */}
+            <div className="comment-text">
+              <p>
+                {node.text}
+              </p>
+            </div>
 
-          <div className="mt-2 flex items-center gap-3">
-            <VoteButton onClick={() => upvote(node.id)} count={node.upvotes} />
-            <button className="text-xs text-gray-700 hover:text-black underline underline-offset-2" onClick={() => toggle(node.id)}>Reply</button>
-            <CollapseToggle collapsed={collapsed} onClick={() => toggle(`c_${node.id}`)} />
+            {/* Action buttons */}
+            <div className="comment-actions">
+              <VoteButton onClick={() => upvote(node.id)} count={node.upvotes} />
+              <button 
+                className="reply-button" 
+                onClick={() => toggle(node.id)}
+              >
+                Reply
+              </button>
+              {node.children?.length > 0 && (
+                <CollapseToggle collapsed={collapsed} onClick={() => toggle(`c_${node.id}`)} />
+              )}
+            </div>
+
+            {/* Reply form */}
+            {collapsedMap[node.id] && user && (
+              <div className="reply-form-container">
+                <ReplyForm onSubmit={(text) => reply(node.id, text, 1 /*demo user_id*/)} />
+              </div>
+            )}
           </div>
-
-          {/* inline reply form keyed by toggle(node.id) */}
-          {collapsedMap[node.id] && user && (
-            <ReplyForm onSubmit={(text) => reply(node.id, text, 1 /*demo user_id*/)} />
-          )}
         </div>
       </div>
 
-      {/* children */}
+      {/* Nested replies */}
       {!collapsedMap[`c_${node.id}`] && node.children?.length > 0 && (
-        <div className="mt-3 border-l-2 border-gray-200 pl-4 ml-4 space-y-3">
+        <div className="nested-comments">
           {node.children.map(ch => (
             <CommentItem key={ch.id} node={ch} level={level+1} collapsedMap={collapsedMap} />
           ))}

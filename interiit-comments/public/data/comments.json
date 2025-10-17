@@ -1,6 +1,802 @@
 [
-  { "id": 1, "text": "First!", "upvotes": 2, "created_at": "2025-10-10T10:00:00.000Z", "user_id": 1 },
-  { "id": 2, "text": "Nice post.", "upvotes": 1, "created_at": "2025-10-10T11:00:00.000Z", "user_id": 2 },
-  { "id": 3, "text": "I have a question.", "upvotes": 0, "created_at": "2025-10-10T12:30:00.000Z", "user_id": 3 },
-  { "id": 4, "text": "Reply to #3", "parent_id": 3, "upvotes": 0, "created_at": "2025-10-10T13:00:00.000Z", "user_id": 1 }
+  {
+    "id": 1,
+    "parent_id": null,
+    "text": "Interesting, I hadn't thought about it this way before.",
+    "upvotes": 50,
+    "created_at": "2023-09-08T05:01:07.787Z",
+    "user_id": "d9b5c4a2-6224-43c1-ac0e-fac037a68f24"
+  },
+  {
+    "id": 2,
+    "parent_id": null,
+    "text": "Great post! Really enjoyed reading this.",
+    "upvotes": 45,
+    "created_at": "2024-07-08T16:54:08.105Z",
+    "user_id": "22c9e59a-9859-4b1f-9d3d-dee4242ee482"
+  },
+  {
+    "id": 3,
+    "parent_id": null,
+    "text": "Amazing work! Keep it up.",
+    "upvotes": 45,
+    "created_at": "2023-04-04T01:10:42.059Z",
+    "user_id": "b11dc688-a097-4f57-9da8-6d79dc46b69e"
+  },
+  {
+    "id": 4,
+    "parent_id": null,
+    "text": "This needs more clarification.",
+    "upvotes": 21,
+    "created_at": "2024-09-04T06:51:13.222Z",
+    "user_id": "7b8c293e-fcda-45c0-910e-03620446aed7"
+  },
+  {
+    "id": 5,
+    "parent_id": null,
+    "text": "Can someone clarify this for me?",
+    "upvotes": 53,
+    "created_at": "2024-05-25T02:32:45.007Z",
+    "user_id": "966869ae-24d8-4422-9797-41a93a9ce0b5"
+  },
+  {
+    "id": 6,
+    "parent_id": null,
+    "text": "This seems a bit off, I think there's a mistake.",
+    "upvotes": 41,
+    "created_at": "2024-10-27T19:06:34.677Z",
+    "user_id": "8f09e48f-f422-4b14-86f3-0a1363ba3923"
+  },
+  {
+    "id": 7,
+    "parent_id": null,
+    "text": "Can someone clarify this for me?",
+    "upvotes": 26,
+    "created_at": "2022-11-12T12:21:50.178Z",
+    "user_id": "a0ce8e77-cf55-438c-a133-43a92d5f6893"
+  },
+  {
+    "id": 8,
+    "parent_id": null,
+    "text": "I like how you structured your explanation.",
+    "upvotes": 45,
+    "created_at": "2023-07-02T11:37:26.526Z",
+    "user_id": "c7bd5c99-df9b-4030-a31b-fdd3fba1a3dc"
+  },
+  {
+    "id": 9,
+    "parent_id": null,
+    "text": "Helpful tips, thanks!",
+    "upvotes": 63,
+    "created_at": "2022-12-29T01:46:09.797Z",
+    "user_id": "8020105d-849c-4553-a316-3c2927eb3247"
+  },
+  {
+    "id": 10,
+    "parent_id": null,
+    "text": "Not sure I understand this fully.",
+    "upvotes": 50,
+    "created_at": "2023-10-28T11:12:59.263Z",
+    "user_id": "8020105d-849c-4553-a316-3c2927eb3247"
+  },
+  {
+    "id": 11,
+    "parent_id": null,
+    "text": "Interesting, I hadn't thought about it this way before.",
+    "upvotes": 77,
+    "created_at": "2025-01-11T21:57:34.464Z",
+    "user_id": "aae37746-cefc-4338-bb21-6981b40717dd"
+  },
+  {
+    "id": 12,
+    "parent_id": null,
+    "text": "I have a different perspective on this topic.",
+    "upvotes": 80,
+    "created_at": "2024-04-26T16:30:19.631Z",
+    "user_id": "9b0d266c-538e-49c7-bbff-861eb6e1d0bb"
+  },
+  {
+    "id": 13,
+    "parent_id": null,
+    "text": "I disagree with the main argument here.",
+    "upvotes": 11,
+    "created_at": "2023-08-01T07:58:04.692Z",
+    "user_id": "a73fc2ad-3c1d-4532-8d2f-00907fcbf045"
+  },
+  {
+    "id": 14,
+    "parent_id": null,
+    "text": "Can someone clarify this for me?",
+    "upvotes": 60,
+    "created_at": "2025-09-01T18:01:36.863Z",
+    "user_id": "4ccdd157-3bde-4bb9-b26a-a86c349cf3d3"
+  },
+  {
+    "id": 15,
+    "parent_id": null,
+    "text": "Can we get a follow-up on this topic?",
+    "upvotes": 78,
+    "created_at": "2023-07-22T18:31:10.286Z",
+    "user_id": "0c7291b6-21fc-4a88-b945-5be18f3417a4"
+  },
+  {
+    "id": 16,
+    "parent_id": null,
+    "text": "I like how you structured your explanation.",
+    "upvotes": 6,
+    "created_at": "2023-09-02T08:20:03.808Z",
+    "user_id": "aae37746-cefc-4338-bb21-6981b40717dd"
+  },
+  {
+    "id": 17,
+    "parent_id": null,
+    "text": "I appreciate the effort you put into this.",
+    "upvotes": 27,
+    "created_at": "2025-08-31T22:59:23.427Z",
+    "user_id": "67240c02-4120-4b9e-8a53-46deb231f1c2"
+  },
+  {
+    "id": 18,
+    "parent_id": null,
+    "text": "Very engaging content!",
+    "upvotes": 7,
+    "created_at": "2023-11-09T00:58:20.404Z",
+    "user_id": "9f8d23cd-8ad0-4335-9d3c-54325a354ed2"
+  },
+  {
+    "id": 19,
+    "parent_id": null,
+    "text": "I love the examples you used, very clear.",
+    "upvotes": 3,
+    "created_at": "2024-08-15T19:55:38.077Z",
+    "user_id": "9bcad024-ee11-423d-8ce5-dab233f45287"
+  },
+  {
+    "id": 20,
+    "parent_id": null,
+    "text": "Very engaging content!",
+    "upvotes": 46,
+    "created_at": "2025-09-06T04:23:02.110Z",
+    "user_id": "b11dc688-a097-4f57-9da8-6d79dc46b69e"
+  },
+  {
+    "id": 21,
+    "parent_id": null,
+    "text": "Can you provide a source for this claim?",
+    "upvotes": 84,
+    "created_at": "2024-05-02T11:15:48.568Z",
+    "user_id": "9e92ed55-e15c-4cb1-b5ee-1e0278f38b35"
+  },
+  {
+    "id": 22,
+    "parent_id": null,
+    "text": "This is confusing, can you provide a simpler example?",
+    "upvotes": 59,
+    "created_at": "2022-11-12T12:45:50.179Z",
+    "user_id": "b11dc688-a097-4f57-9da8-6d79dc46b69e"
+  },
+  {
+    "id": 23,
+    "parent_id": null,
+    "text": "Does anyone else feel the same way?",
+    "upvotes": 38,
+    "created_at": "2025-10-04T20:39:28.135Z",
+    "user_id": "454cca7e-ae1f-4c55-9003-616237c18ba2"
+  },
+  {
+    "id": 24,
+    "parent_id": null,
+    "text": "This could be improved by adding more references.",
+    "upvotes": 54,
+    "created_at": "2025-03-06T21:36:34.357Z",
+    "user_id": "190e2796-a946-4e87-ab08-2a2f1d04294c"
+  },
+  {
+    "id": 25,
+    "parent_id": null,
+    "text": "Amazing work! Keep it up.",
+    "upvotes": 91,
+    "created_at": "2024-03-04T10:59:23.189Z",
+    "user_id": "cc0588de-70fd-4c20-af6e-297a1a2b94cd"
+  },
+  {
+    "id": 26,
+    "parent_id": null,
+    "text": "I learned something new today.",
+    "upvotes": 90,
+    "created_at": "2024-04-08T12:50:26.581Z",
+    "user_id": "d9b5c4a2-6224-43c1-ac0e-fac037a68f24"
+  },
+  {
+    "id": 27,
+    "parent_id": null,
+    "text": "Can someone clarify this for me?",
+    "upvotes": 61,
+    "created_at": "2023-01-14T22:20:45.807Z",
+    "user_id": "c7bd5c99-df9b-4030-a31b-fdd3fba1a3dc"
+  },
+  {
+    "id": 28,
+    "parent_id": null,
+    "text": "I love the examples you used, very clear.",
+    "upvotes": 21,
+    "created_at": "2025-05-22T03:08:50.770Z",
+    "user_id": "35da3244-d01f-4a0b-b7ae-c0b4f7f09488"
+  },
+  {
+    "id": 29,
+    "parent_id": null,
+    "text": "This needs more clarification.",
+    "upvotes": 89,
+    "created_at": "2024-11-13T23:25:15.226Z",
+    "user_id": "966869ae-24d8-4422-9797-41a93a9ce0b5"
+  },
+  {
+    "id": 30,
+    "parent_id": null,
+    "text": "Amazing work! Keep it up.",
+    "upvotes": 80,
+    "created_at": "2023-02-09T00:43:19.364Z",
+    "user_id": "2c612e74-1dad-4f91-8d45-b233585e12b1"
+  },
+  {
+    "id": 31,
+    "parent_id": null,
+    "text": "I completely agree with your point here.",
+    "upvotes": 54,
+    "created_at": "2023-01-23T14:42:35.577Z",
+    "user_id": "b11dc688-a097-4f57-9da8-6d79dc46b69e"
+  },
+  {
+    "id": 32,
+    "parent_id": null,
+    "text": "Thanks for sharing, very informative.",
+    "upvotes": 77,
+    "created_at": "2023-09-14T08:48:39.616Z",
+    "user_id": "35da3244-d01f-4a0b-b7ae-c0b4f7f09488"
+  },
+  {
+    "id": 33,
+    "parent_id": null,
+    "text": "This could be improved by adding more references.",
+    "upvotes": 58,
+    "created_at": "2023-09-21T17:59:25.131Z",
+    "user_id": "540cc3a9-40c7-4f11-bd25-e903c80232b3"
+  },
+  {
+    "id": 34,
+    "parent_id": null,
+    "text": "I have a different perspective on this topic.",
+    "upvotes": 26,
+    "created_at": "2023-02-27T12:17:55.354Z",
+    "user_id": "b1c995bf-b6cb-4758-8ad4-dfdde8eb887e"
+  },
+  {
+    "id": 35,
+    "parent_id": null,
+    "text": "Can we get a follow-up on this topic?",
+    "upvotes": 29,
+    "created_at": "2024-12-19T11:43:07.001Z",
+    "user_id": "a73fc2ad-3c1d-4532-8d2f-00907fcbf045"
+  },
+  {
+    "id": 36,
+    "parent_id": null,
+    "text": "I like how you structured your explanation.",
+    "upvotes": 3,
+    "created_at": "2023-08-20T19:20:35.690Z",
+    "user_id": "c7bd5c99-df9b-4030-a31b-fdd3fba1a3dc"
+  },
+  {
+    "id": 37,
+    "parent_id": null,
+    "text": "I think this argument is weak.",
+    "upvotes": 26,
+    "created_at": "2023-11-07T23:11:06.487Z",
+    "user_id": "cc0588de-70fd-4c20-af6e-297a1a2b94cd"
+  },
+  {
+    "id": 38,
+    "parent_id": null,
+    "text": "Can someone clarify this for me?",
+    "upvotes": 12,
+    "created_at": "2024-10-29T00:08:24.850Z",
+    "user_id": "190e2796-a946-4e87-ab08-2a2f1d04294c"
+  },
+  {
+    "id": 39,
+    "parent_id": null,
+    "text": "I like how you structured your explanation.",
+    "upvotes": 34,
+    "created_at": "2025-07-01T02:18:35.098Z",
+    "user_id": "cc0588de-70fd-4c20-af6e-297a1a2b94cd"
+  },
+  {
+    "id": 40,
+    "parent_id": null,
+    "text": "I disagree with the main argument here.",
+    "upvotes": 39,
+    "created_at": "2023-11-26T21:47:20.419Z",
+    "user_id": "ae2d6736-cb44-4fa3-9448-8aa2dc617d6c"
+  },
+  {
+    "id": 41,
+    "parent_id": null,
+    "text": "I completely agree with your point here.",
+    "upvotes": 58,
+    "created_at": "2024-01-10T10:54:38.682Z",
+    "user_id": "aae37746-cefc-4338-bb21-6981b40717dd"
+  },
+  {
+    "id": 42,
+    "parent_id": null,
+    "text": "I learned something new today.",
+    "upvotes": 88,
+    "created_at": "2023-07-05T21:52:01.369Z",
+    "user_id": "9f8d23cd-8ad0-4335-9d3c-54325a354ed2"
+  },
+  {
+    "id": 43,
+    "parent_id": null,
+    "text": "Could you explain this part in more detail?",
+    "upvotes": 12,
+    "created_at": "2023-08-03T11:03:50.455Z",
+    "user_id": "0c7291b6-21fc-4a88-b945-5be18f3417a4"
+  },
+  {
+    "id": 44,
+    "parent_id": null,
+    "text": "Nice article, very well written.",
+    "upvotes": 63,
+    "created_at": "2024-05-01T21:37:09.981Z",
+    "user_id": "674ab162-ed36-4267-b49b-e79a90d1874b"
+  },
+  {
+    "id": 45,
+    "parent_id": null,
+    "text": "Interesting, I hadn't thought about it this way before.",
+    "upvotes": 18,
+    "created_at": "2025-09-26T09:00:30.906Z",
+    "user_id": "674ab162-ed36-4267-b49b-e79a90d1874b"
+  },
+  {
+    "id": 46,
+    "parent_id": null,
+    "text": "I think there's a typo in the third paragraph.",
+    "upvotes": 31,
+    "created_at": "2022-11-10T06:50:59.407Z",
+    "user_id": "2c612e74-1dad-4f91-8d45-b233585e12b1"
+  },
+  {
+    "id": 47,
+    "parent_id": null,
+    "text": "Not sure I understand this fully.",
+    "upvotes": 77,
+    "created_at": "2022-12-31T21:05:54.164Z",
+    "user_id": "9f8d23cd-8ad0-4335-9d3c-54325a354ed2"
+  },
+  {
+    "id": 48,
+    "parent_id": null,
+    "text": "I think there's a typo in the third paragraph.",
+    "upvotes": 92,
+    "created_at": "2024-11-16T16:10:53.100Z",
+    "user_id": "9e92ed55-e15c-4cb1-b5ee-1e0278f38b35"
+  },
+  {
+    "id": 49,
+    "parent_id": null,
+    "text": "Does anyone else feel the same way?",
+    "upvotes": 12,
+    "created_at": "2023-12-30T19:20:11.606Z",
+    "user_id": "a73fc2ad-3c1d-4532-8d2f-00907fcbf045"
+  },
+  {
+    "id": 50,
+    "parent_id": null,
+    "text": "Brilliant explanation!",
+    "upvotes": 49,
+    "created_at": "2025-08-31T19:23:42.846Z",
+    "user_id": "2c612e74-1dad-4f91-8d45-b233585e12b1"
+  },
+  {
+    "id": 51,
+    "parent_id": 44,
+    "text": "I completely agree with your point here.",
+    "upvotes": 49,
+    "created_at": "2023-10-13T16:00:07.642Z",
+    "user_id": "d9b5c4a2-6224-43c1-ac0e-fac037a68f24"
+  },
+  {
+    "id": 52,
+    "parent_id": 23,
+    "text": "I think this argument is weak.",
+    "upvotes": 94,
+    "created_at": "2023-01-29T14:07:20.155Z",
+    "user_id": "2c612e74-1dad-4f91-8d45-b233585e12b1"
+  },
+  {
+    "id": 53,
+    "parent_id": 11,
+    "text": "Thanks for sharing, very informative.",
+    "upvotes": 58,
+    "created_at": "2024-12-14T14:27:37.735Z",
+    "user_id": "35da3244-d01f-4a0b-b7ae-c0b4f7f09488"
+  },
+  {
+    "id": 54,
+    "parent_id": 22,
+    "text": "Can we get a follow-up on this topic?",
+    "upvotes": 77,
+    "created_at": "2023-12-09T19:28:43.118Z",
+    "user_id": "8020105d-849c-4553-a316-3c2927eb3247"
+  },
+  {
+    "id": 55,
+    "parent_id": 44,
+    "text": "I learned something new today.",
+    "upvotes": 67,
+    "created_at": "2024-02-09T04:44:26.650Z",
+    "user_id": "9bcad024-ee11-423d-8ce5-dab233f45287"
+  },
+  {
+    "id": 56,
+    "parent_id": 42,
+    "text": "This could be improved by adding more references.",
+    "upvotes": 89,
+    "created_at": "2025-01-11T05:01:06.884Z",
+    "user_id": "7b8c293e-fcda-45c0-910e-03620446aed7"
+  },
+  {
+    "id": 57,
+    "parent_id": 48,
+    "text": "Excellent insights, thanks for posting.",
+    "upvotes": 60,
+    "created_at": "2024-05-25T06:15:26.076Z",
+    "user_id": "b11dc688-a097-4f57-9da8-6d79dc46b69e"
+  },
+  {
+    "id": 58,
+    "parent_id": 37,
+    "text": "Could you explain this part in more detail?",
+    "upvotes": 9,
+    "created_at": "2023-10-26T03:24:52.502Z",
+    "user_id": "4ccdd157-3bde-4bb9-b26a-a86c349cf3d3"
+  },
+  {
+    "id": 59,
+    "parent_id": 49,
+    "text": "Brilliant explanation!",
+    "upvotes": 64,
+    "created_at": "2024-11-09T05:42:30.837Z",
+    "user_id": "c740a93c-99e9-46f2-8e57-cad6232ecb66"
+  },
+  {
+    "id": 60,
+    "parent_id": 16,
+    "text": "I'm not convinced about this part.",
+    "upvotes": 41,
+    "created_at": "2024-06-07T14:56:21.651Z",
+    "user_id": "674ab162-ed36-4267-b49b-e79a90d1874b"
+  },
+  {
+    "id": 61,
+    "parent_id": 8,
+    "text": "Helpful tips, thanks!",
+    "upvotes": 42,
+    "created_at": "2023-05-16T02:41:16.127Z",
+    "user_id": "d9b5c4a2-6224-43c1-ac0e-fac037a68f24"
+  },
+  {
+    "id": 62,
+    "parent_id": 40,
+    "text": "Brilliant explanation!",
+    "upvotes": 56,
+    "created_at": "2023-08-21T21:19:26.757Z",
+    "user_id": "7b8c293e-fcda-45c0-910e-03620446aed7"
+  },
+  {
+    "id": 63,
+    "parent_id": 16,
+    "text": "Not sure I understand this fully.",
+    "upvotes": 85,
+    "created_at": "2023-05-09T04:07:51.994Z",
+    "user_id": "454cca7e-ae1f-4c55-9003-616237c18ba2"
+  },
+  {
+    "id": 64,
+    "parent_id": 31,
+    "text": "Can you provide a source for this claim?",
+    "upvotes": 19,
+    "created_at": "2022-10-20T16:29:46.726Z",
+    "user_id": "0c7291b6-21fc-4a88-b945-5be18f3417a4"
+  },
+  {
+    "id": 65,
+    "parent_id": 4,
+    "text": "I have a different perspective on this topic.",
+    "upvotes": 50,
+    "created_at": "2024-04-03T18:31:13.471Z",
+    "user_id": "9b0d266c-538e-49c7-bbff-861eb6e1d0bb"
+  },
+  {
+    "id": 66,
+    "parent_id": 12,
+    "text": "Amazing work! Keep it up.",
+    "upvotes": 77,
+    "created_at": "2025-07-30T20:45:21.172Z",
+    "user_id": "8f09e48f-f422-4b14-86f3-0a1363ba3923"
+  },
+  {
+    "id": 67,
+    "parent_id": 2,
+    "text": "Can we get a follow-up on this topic?",
+    "upvotes": 23,
+    "created_at": "2025-01-10T01:36:40.250Z",
+    "user_id": "aae37746-cefc-4338-bb21-6981b40717dd"
+  },
+  {
+    "id": 68,
+    "parent_id": 43,
+    "text": "I appreciate the effort you put into this.",
+    "upvotes": 40,
+    "created_at": "2024-01-31T11:05:02.790Z",
+    "user_id": "22c9e59a-9859-4b1f-9d3d-dee4242ee482"
+  },
+  {
+    "id": 69,
+    "parent_id": 36,
+    "text": "I disagree with the main argument here.",
+    "upvotes": 34,
+    "created_at": "2024-07-02T10:21:26.041Z",
+    "user_id": "83528992-7e8c-4042-a18c-2a6d96ef8a45"
+  },
+  {
+    "id": 70,
+    "parent_id": 6,
+    "text": "Interesting, I hadn't thought about it this way before.",
+    "upvotes": 30,
+    "created_at": "2025-08-02T19:27:50.711Z",
+    "user_id": "454cca7e-ae1f-4c55-9003-616237c18ba2"
+  },
+  {
+    "id": 71,
+    "parent_id": 51,
+    "text": "I'm not convinced about this part.",
+    "upvotes": 30,
+    "created_at": "2023-11-02T05:58:41.199Z",
+    "user_id": "8f09e48f-f422-4b14-86f3-0a1363ba3923"
+  },
+  {
+    "id": 72,
+    "parent_id": 4,
+    "text": "This is confusing, can you provide a simpler example?",
+    "upvotes": 0,
+    "created_at": "2024-10-04T13:40:37.314Z",
+    "user_id": "d9b5c4a2-6224-43c1-ac0e-fac037a68f24"
+  },
+  {
+    "id": 73,
+    "parent_id": 29,
+    "text": "This helped me a lot, thanks!",
+    "upvotes": 84,
+    "created_at": "2023-06-08T06:38:56.891Z",
+    "user_id": "35da3244-d01f-4a0b-b7ae-c0b4f7f09488"
+  },
+  {
+    "id": 74,
+    "parent_id": 23,
+    "text": "Thanks for sharing, very informative.",
+    "upvotes": 67,
+    "created_at": "2024-08-26T17:36:55.450Z",
+    "user_id": "83528992-7e8c-4042-a18c-2a6d96ef8a45"
+  },
+  {
+    "id": 75,
+    "parent_id": 63,
+    "text": "I disagree with the main argument here.",
+    "upvotes": 24,
+    "created_at": "2024-04-24T03:13:22.405Z",
+    "user_id": "aae37746-cefc-4338-bb21-6981b40717dd"
+  },
+  {
+    "id": 76,
+    "parent_id": 35,
+    "text": "I disagree with the main argument here.",
+    "upvotes": 93,
+    "created_at": "2024-02-20T21:53:42.587Z",
+    "user_id": "454cca7e-ae1f-4c55-9003-616237c18ba2"
+  },
+  {
+    "id": 77,
+    "parent_id": 32,
+    "text": "Helpful tips, thanks!",
+    "upvotes": 2,
+    "created_at": "2025-01-06T02:55:01.208Z",
+    "user_id": "67240c02-4120-4b9e-8a53-46deb231f1c2"
+  },
+  {
+    "id": 78,
+    "parent_id": 59,
+    "text": "Brilliant explanation!",
+    "upvotes": 79,
+    "created_at": "2025-07-16T04:57:41.260Z",
+    "user_id": "190e2796-a946-4e87-ab08-2a2f1d04294c"
+  },
+  {
+    "id": 79,
+    "parent_id": 58,
+    "text": "Not sure I understand this fully.",
+    "upvotes": 5,
+    "created_at": "2023-10-28T20:12:02.700Z",
+    "user_id": "67240c02-4120-4b9e-8a53-46deb231f1c2"
+  },
+  {
+    "id": 80,
+    "parent_id": 70,
+    "text": "I think this argument is weak.",
+    "upvotes": 60,
+    "created_at": "2022-11-27T06:03:33.588Z",
+    "user_id": "9f8d23cd-8ad0-4335-9d3c-54325a354ed2"
+  },
+  {
+    "id": 81,
+    "parent_id": 53,
+    "text": "Great post! Really enjoyed reading this.",
+    "upvotes": 80,
+    "created_at": "2024-10-08T22:18:52.540Z",
+    "user_id": "cc0588de-70fd-4c20-af6e-297a1a2b94cd"
+  },
+  {
+    "id": 82,
+    "parent_id": 65,
+    "text": "Does anyone else feel the same way?",
+    "upvotes": 91,
+    "created_at": "2023-01-28T05:53:52.106Z",
+    "user_id": "9bcad024-ee11-423d-8ce5-dab233f45287"
+  },
+  {
+    "id": 83,
+    "parent_id": 7,
+    "text": "Thanks for sharing, very informative.",
+    "upvotes": 96,
+    "created_at": "2025-04-02T18:39:27.861Z",
+    "user_id": "c740a93c-99e9-46f2-8e57-cad6232ecb66"
+  },
+  {
+    "id": 84,
+    "parent_id": 80,
+    "text": "This seems a bit off, I think there's a mistake.",
+    "upvotes": 51,
+    "created_at": "2023-05-27T23:43:30.757Z",
+    "user_id": "7b8c293e-fcda-45c0-910e-03620446aed7"
+  },
+  {
+    "id": 85,
+    "parent_id": 22,
+    "text": "Great post! Really enjoyed reading this.",
+    "upvotes": 7,
+    "created_at": "2023-07-01T17:03:47.699Z",
+    "user_id": "2c612e74-1dad-4f91-8d45-b233585e12b1"
+  },
+  {
+    "id": 86,
+    "parent_id": 43,
+    "text": "Helpful tips, thanks!",
+    "upvotes": 59,
+    "created_at": "2024-09-24T04:15:32.788Z",
+    "user_id": "9e92ed55-e15c-4cb1-b5ee-1e0278f38b35"
+  },
+  {
+    "id": 87,
+    "parent_id": 47,
+    "text": "Great post! Really enjoyed reading this.",
+    "upvotes": 13,
+    "created_at": "2023-11-27T17:19:57.303Z",
+    "user_id": "7b8c293e-fcda-45c0-910e-03620446aed7"
+  },
+  {
+    "id": 88,
+    "parent_id": 62,
+    "text": "Thanks for sharing, very informative.",
+    "upvotes": 55,
+    "created_at": "2024-08-27T08:22:58.603Z",
+    "user_id": "9f8d23cd-8ad0-4335-9d3c-54325a354ed2"
+  },
+  {
+    "id": 89,
+    "parent_id": 18,
+    "text": "I'm not convinced about this part.",
+    "upvotes": 44,
+    "created_at": "2024-11-02T06:01:06.800Z",
+    "user_id": "b1c995bf-b6cb-4758-8ad4-dfdde8eb887e"
+  },
+  {
+    "id": 90,
+    "parent_id": 89,
+    "text": "Nice article, very well written.",
+    "upvotes": 44,
+    "created_at": "2024-12-20T12:26:13.187Z",
+    "user_id": "7b8c293e-fcda-45c0-910e-03620446aed7"
+  },
+  {
+    "id": 91,
+    "parent_id": 90,
+    "text": "Could you explain this part in more detail?",
+    "upvotes": 100,
+    "created_at": "2025-07-23T01:38:33.995Z",
+    "user_id": "2c612e74-1dad-4f91-8d45-b233585e12b1"
+  },
+  {
+    "id": 92,
+    "parent_id": 17,
+    "text": "Helpful tips, thanks!",
+    "upvotes": 47,
+    "created_at": "2023-12-22T20:01:22.706Z",
+    "user_id": "b11dc688-a097-4f57-9da8-6d79dc46b69e"
+  },
+  {
+    "id": 93,
+    "parent_id": 26,
+    "text": "Helpful tips, thanks!",
+    "upvotes": 89,
+    "created_at": "2023-02-17T18:22:29.587Z",
+    "user_id": "35da3244-d01f-4a0b-b7ae-c0b4f7f09488"
+  },
+  {
+    "id": 94,
+    "parent_id": 33,
+    "text": "I have a different perspective on this topic.",
+    "upvotes": 7,
+    "created_at": "2022-11-08T01:09:33.911Z",
+    "user_id": "35da3244-d01f-4a0b-b7ae-c0b4f7f09488"
+  },
+  {
+    "id": 95,
+    "parent_id": 76,
+    "text": "Nice article, very well written.",
+    "upvotes": 50,
+    "created_at": "2024-12-23T04:28:18.986Z",
+    "user_id": "8f09e48f-f422-4b14-86f3-0a1363ba3923"
+  },
+  {
+    "id": 96,
+    "parent_id": 44,
+    "text": "Very engaging content!",
+    "upvotes": 33,
+    "created_at": "2025-07-21T07:42:15.098Z",
+    "user_id": "190e2796-a946-4e87-ab08-2a2f1d04294c"
+  },
+  {
+    "id": 97,
+    "parent_id": 42,
+    "text": "Nice article, very well written.",
+    "upvotes": 99,
+    "created_at": "2024-11-26T20:58:43.936Z",
+    "user_id": "a73fc2ad-3c1d-4532-8d2f-00907fcbf045"
+  },
+  {
+    "id": 98,
+    "parent_id": 71,
+    "text": "Great post! Really enjoyed reading this.",
+    "upvotes": 78,
+    "created_at": "2023-06-28T18:00:21.465Z",
+    "user_id": "c740a93c-99e9-46f2-8e57-cad6232ecb66"
+  },
+  {
+    "id": 99,
+    "parent_id": 59,
+    "text": "I appreciate the effort you put into this.",
+    "upvotes": 14,
+    "created_at": "2024-04-07T22:00:23.647Z",
+    "user_id": "22c9e59a-9859-4b1f-9d3d-dee4242ee482"
+  },
+  {
+    "id": 100,
+    "parent_id": 63,
+    "text": "I think there's a typo in the third paragraph.",
+    "upvotes": 79,
+    "created_at": "2025-02-18T17:44:34.931Z",
+    "user_id": "966869ae-24d8-4422-9797-41a93a9ce0b5"
+  }
 ]

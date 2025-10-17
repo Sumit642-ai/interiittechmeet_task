@@ -8,8 +8,8 @@ export const AuthProvider = ({ children }) => {
   });
 
   const login = (email) => {
-    const ok = email.endsWith("@iit.ac.in") || email === "admin@example.com";
-    if (!ok) throw new Error("Use your @iit.ac.in email");
+    const ok = email.endsWith("@iit.ac.in") || email.endsWith("@kgpian.iitkgp.ac.in") || email === "admin@example.com";
+    if (!ok) throw new Error("Use your @iit.ac.in or @kgpian.iitkgp.ac.in email");
     const u = { email, role: email.startsWith("admin") ? "ADMIN" : "USER" };
     setUser(u);
     localStorage.setItem("user", JSON.stringify(u));

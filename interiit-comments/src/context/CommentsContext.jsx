@@ -11,21 +11,19 @@ export const CommentsProvider = ({ children }) => {
 
   // init from localStorage or fetch
   useEffect(() => {
-    const local = localStorage.getItem("comments");
-    if (local) {
-      const { users, comments } = JSON.parse(local);
-      setUsers(users); setComments(comments);
-    } else {
-      (async () => {
-        try {
-          const [u, c] = await Promise.all([fetchUsers(), fetchComments()]);
-          setUsers(u); setComments(c);
-        } catch (e) {
-          console.error("Failed to fetch comments data:", e);
-          setUsers([]); setComments([]);
-        }
-      })();
-    }
+    // Clear localStorage to force fresh data load
+    localStorage.removeItem("comments");
+    
+    (async () => {
+      try {
+        const [u, c] = await Promise.all([fetchUsers(), fetchComments()]);
+        setUsers(u); setComments(c);
+        console.log("Loaded fresh data:", { users: u.length, comments: c.length });
+      } catch (e) {
+        console.error("Failed to fetch comments data:", e);
+        setUsers([]); setComments([]);
+      }
+    })();
   }, []);
 
   useEffect(() => {

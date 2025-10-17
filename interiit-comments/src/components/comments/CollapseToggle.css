@@ -1,0 +1,14 @@
+/* CollapseToggle Styles */
+.collapse-toggle {
+  font-size: 0.75rem;
+  color: #9ca3af;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.2s ease-in-out;
+}
+
+.collapse-toggle:hover {
+  color: white;
+}

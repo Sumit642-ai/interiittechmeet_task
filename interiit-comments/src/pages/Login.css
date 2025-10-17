@@ -1,0 +1,260 @@
+/* Login Page Styles */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  background-color: #f9fafb;
+}
+
+/* Left Side - Login Form (60% width) */
+.login-form-section {
+  flex: 0.6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 1rem;
+}
+
+.login-form-container {
+  width: 100%;
+  max-width: 24rem;
+}
+
+/* InterIIT Logo at Top */
+.interiit-logo-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.interiit-logo {
+  max-width: 150px;
+  max-height: 80px;
+  object-fit: contain;
+}
+
+/* Header */
+.login-header {
+  margin-bottom: 1.5rem;
+}
+
+.login-subtitle {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 0.25rem;
+  font-weight: normal;
+}
+
+.login-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #111827;
+}
+
+/* Form */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+.form-input-container {
+  position: relative;
+}
+
+.form-input {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  padding-right: 3rem;
+  font-size: 1rem;
+  color: #111827;
+  background-color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #059669;
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
+}
+
+.form-input.email-input {
+  border-color: #10b981;
+}
+
+.form-input::placeholder {
+  color: #9ca3af;
+}
+
+.form-icon {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1rem;
+  color: #9ca3af;
+  pointer-events: none;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.password-toggle svg {
+  width: 1rem;
+  height: 1rem;
+  color: #9ca3af;
+}
+
+/* Error Message */
+.error-message {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+}
+
+.error-text {
+  color: #dc2626;
+  font-size: 0.875rem;
+}
+
+/* Sign Up Button */
+.signup-button {
+  width: 100%;
+  background-color: #059669;
+  color: white;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.signup-button:hover {
+  background-color: #047857;
+}
+
+.signup-button:active {
+  background-color: #065f46;
+}
+
+.signup-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.loading-spinner {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+/* Sign In Link */
+.signin-link {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.signin-text {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.signin-button {
+  color: #059669;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 0.25rem;
+}
+
+.signin-button:hover {
+  color: #047857;
+}
+
+
+/* Right Side - Abstract Background (40% width) */
+.login-image-section {
+  flex: 0.4;
+  position: relative;
+  display: none;
+}
+
+.login-image-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('/13th_inter_iit_tech_meet_logo.jpg');
+}
+
+
+/* Responsive Design */
+@media (min-width: 1024px) {
+  .login-image-section {
+    display: flex;
+  }
+  
+  .login-form-section {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 1023px) {
+  .login-container {
+    flex-direction: column;
+  }
+  
+  .login-form-section {
+    flex: 1;
+    padding: 1rem;
+  }
+  
+  .login-image-section {
+    display: none;
+  }
+  
+  .login-form-container {
+    max-width: 100%;
+  }
+}
